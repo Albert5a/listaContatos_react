@@ -16,3 +16,5 @@ export const Container = styled.div`
 `
 
 export default EstiloGlobal
+
+// #0000FF #120a8f #50008b
