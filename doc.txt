@@ -1,0 +1,23 @@
+React com TypeScript
+Create React App como contrutor (similar ao Vite)
+    npx create-react-app lista-contatos --template typescript
+Editorconfig - padroniza as configurações do navegador (ponto e vírgula, estilo de formatação do código)
+    cria arquivo: .editorconfig (baixa extensão) (e escreve as configurações)
+Eslint - nos ajuda a escrever códigos de qualidade, apontar erros e a previnir bugs
+    npx eslint --init (escolhemos a opção de checar sintaxe e encontrar problemas, e codar com react, typescript, json)
+    npm install --save-dev eslint-plugin-react-hooks (para o eslint entender o uso dos hooks)
+Pretier - uma ferramenta que nos ajuda a manter um estilo de código (assim como o editorconfig)
+    npm install --save-dev eslint-plugin-prettier eslint-config-prettier
+    npm install --save-dev --save-exact prettier
+    npx prettier --write .\src\ (para corrigir todos arquivos da pasta src)
+Extensões chrome: react developer tools
+StyledComponents
+    npm i --save styled-components
+    npm i --legacy-peer-deps styled-components (caso o anterior dê erro)
+    npm install --save-dev @types/styled-components
+Redux
+    npm i --save react-redux @reduxjs/toolkit
+npm start (para rodar o projeto)
+Criar pasta styles
+    index.ts
+
