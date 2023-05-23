@@ -1,0 +1,1 @@
+Neste projeto de lista de contatos iniciamos criando um arquivo para o EstiloGlobal, em seguida criamos a BarraLateral e a ListaDeContatos. Para finalizar as configurações iniciais, Aplicamos os componentes no App.tsx
