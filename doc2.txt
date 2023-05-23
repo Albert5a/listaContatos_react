@@ -1,1 +1,15 @@
-Neste projeto de lista de contatos iniciamos criando um arquivo para o EstiloGlobal, em seguida criamos a BarraLateral e a ListaDeContatos. Para finalizar as configurações iniciais, Aplicamos os componentes no App.tsx
+https://github.com/Albert5a/listaContatos_react
+
+Ao longo do projeto, desenvolvemos somente na pasta src. As única configurações na pasta públic são feitas no arquivo html para modificação do idioma do projeto, inserção de fonte e modificação do título do projeto.
+
+Configuramos o arquivo da pasta .vscode e os seguintes arquivos para melhor fluxo do desenvolvimento: .editorconfig, .eslintrc.json e .prettierrc.
+A seguir vocês irão executar as configurações iniciais:
+
+Conferindo as pastas e arquivos dentro da pasta src:
+  Vamos manter os principais arquivos dentro da pasta src: App.tsx, index.tsx, react-app-env.g.ts e reportWebVitals.ts.
+
+Neste projeto de lista de contatos iniciamos criando as pastas styles contendo o arquivo para o EstiloGlobal, em seguida criamos a pasta containers onde criamos as pastas BarraLateral e a ListaDeContatos, nas quais criaremos arquivos index.tsx. Para finalizar as configurações iniciais, Aplicamos os componentes no App.tsx.
+
+Trabalhamos nos arquivos já criados e dentro da pasta src criamos a pasta components, na components criamos a pasta FiltroCard com os arquivos index.tsx e styles.ts com as seguintes configurações:
+
+
