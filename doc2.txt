@@ -17,3 +17,5 @@ Trabalhamos nos arquivos já criados e dentro da pasta components criamos a past
 Até aqui na pasta src temos as pastas components (com as pastas Contato e FiltroCard), containers (com as pastas BarraLateral e ListaDeContatos) e styles (com o EstiloGlobal do projeto).
 
 Em seguida trabalhamos com o conceito de State para os botões Editar e Cancelar, e com as Props com um array de objetos para  colocar nome, prioridade e informações.
+
+Iniciamos a configuração do redux na pasta store com arquivo index.ts e pasta reducers com contatos.ts. Para evitar um array de objetos, criamos uma pasta models com o arquivo Contatos.ts para criarmos uma Classe que serão atribuidas aos demais objetos.
