@@ -8,7 +8,7 @@ const BarraLateral = () => (
       <S.Filtros>
         <FiltroCard legenda="familia" contador={1} />
         <FiltroCard legenda="amigos" contador={2} />
-        <FiltroCard legenda="profissão" contador={3} />
+        <FiltroCard legenda="cliente" contador={3} />
         <FiltroCard legenda="todos" contador={6} ativo />
       </S.Filtros>
     </div>

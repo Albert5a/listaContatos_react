@@ -12,4 +12,8 @@ Neste projeto de lista de contatos iniciamos criando as pastas styles contendo o
 
 Trabalhamos nos arquivos já criados e dentro da pasta src criamos a pasta components, na components criamos a pasta FiltroCard com os arquivos index.tsx e styles.ts com as seguintes configurações:
 
+Trabalhamos nos arquivos já criados e dentro da pasta components criamos a pasta Contato com os arquivos index.tsx e styles.ts com as seguintes configurações:
 
+Até aqui na pasta src temos as pastas components (com as pastas Contato e FiltroCard), containers (com as pastas BarraLateral e ListaDeContatos) e styles (com o EstiloGlobal do projeto).
+
+Em seguida trabalhamos com o conceito de State para os botões Editar e Cancelar, e com as Props com um array de objetos para  colocar nome, prioridade e informações.
