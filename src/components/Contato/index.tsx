@@ -1,33 +1,66 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+
 import * as S from './styles'
 
-import * as enums from '../../utils/enums/Contato'
+import { excluir, editar } from '../../store/reducers/contatos'
+import ContatoClass from '../../models/Contato'
 
-type Props = {
-  nome: string
-  prioridade: enums.Prioridade
-  info: string
-}
+type Props = ContatoClass
 
-const Contato = ({ nome, prioridade, info }: Props) => {
+const Contato = ({ nome, prioridade, info: infoOriginal, id }: Props) => {
+  const dispatch = useDispatch()
   const [estaEditando, setEstaEditando] = useState(false)
+  const [info, setInfo] = useState('')
+
+  useEffect(() => {
+    if (infoOriginal.length > 0) {
+      setInfo(infoOriginal)
+    }
+  }, [infoOriginal])
+
+  function cancelarEdicao() {
+    setEstaEditando(false)
+    setInfo(infoOriginal)
+  }
+
   return (
     <S.Card>
       <S.Nome>{nome}</S.Nome>
       <S.Tag prioridade={prioridade}>{prioridade}</S.Tag>
-      <S.Info value={info} />
+      <S.Info
+        disabled={!estaEditando}
+        value={info}
+        onChange={(evento) => setInfo(evento.target.value)}
+      />
       <S.BarraAcoes>
         {estaEditando ? (
           <>
-            <S.BotaoSalvar>Salvar</S.BotaoSalvar>
-            <S.BotaoCancelarExcluir onClick={() => setEstaEditando(false)}>
+            <S.BotaoSalvar
+              onClick={() => {
+                dispatch(
+                  editar({
+                    id,
+                    nome,
+                    prioridade,
+                    info,
+                  })
+                )
+                setEstaEditando(false)
+              }}
+            >
+              Salvar
+            </S.BotaoSalvar>
+            <S.BotaoCancelarExcluir onClick={cancelarEdicao}>
               Cancelar
             </S.BotaoCancelarExcluir>
           </>
         ) : (
           <>
             <S.Botao onClick={() => setEstaEditando(true)}>Editar</S.Botao>
-            <S.BotaoCancelarExcluir>Excluir</S.BotaoCancelarExcluir>
+            <S.BotaoCancelarExcluir onClick={() => dispatch(excluir(id))}>
+              Excluir
+            </S.BotaoCancelarExcluir>
           </>
         )}
       </S.BarraAcoes>
