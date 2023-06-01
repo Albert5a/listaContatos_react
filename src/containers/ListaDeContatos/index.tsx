@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 
 import Contato from '../../components/Contato'
-import { Container } from './styles'
+import { Container, Resultado } from './styles'
 
 import { RootReducer } from '../../store'
 
@@ -30,16 +30,27 @@ const ListaDeContatos = () => {
     }
   }
 
+  const exibeResultadoFiltragem = (quantidade: number) => {
+    let mensagem = ''
+    const complementacao =
+      termo !== undefined && termo.length > 0 ? `e "${termo}"` : ''
+
+    if (criterio === 'todos') {
+      mensagem = `${quantidade} contato(s) encontrado(s) como: todos ${complementacao}`
+    } else {
+      mensagem = `${quantidade} contato(s) encontrado(s) como: "${`${criterio}=${valor}`}${complementacao}"`
+    }
+    return mensagem
+  }
+
+  const contatos = filtraContatos()
+  const mensagem = exibeResultadoFiltragem(contatos.length)
+
   return (
     <Container>
-      <p>1 contato marcado como: &quot;categoria&quot; e &quot;{termo}&quot;</p>
+      <Resultado>{mensagem}</Resultado>
       <ul>
-        <li>{termo}</li>
-        <li>{criterio}</li>
-        <li>{valor}</li>
-      </ul>
-      <ul>
-        {filtraContatos().map((c) => (
+        {contatos.map((c) => (
           <li key={c.nome}>
             <Contato
               id={c.id}
