@@ -12,21 +12,21 @@ const initialState: ContatosState = {
       id: 1,
       nome: 'Julia',
       prioridade: enums.Prioridade.FAMILIA,
-      info: '31976453628 - juli@gmail.com',
+      info: '31976453628 - juli@gmail.com'
     },
     {
       id: 2,
       nome: 'Gustavo',
       prioridade: enums.Prioridade.AMIGO,
-      info: '31983647628 - gugu@gmail.com',
+      info: '31983647628 - gugu@gmail.com'
     },
     {
       id: 3,
       nome: 'Bruna',
       prioridade: enums.Prioridade.CLIENTE,
-      info: '31993465789 - bruna@gmail.com',
-    },
-  ],
+      info: '31993465789 - bruna@gmail.com'
+    }
+  ]
 }
 
 const contatosSlice = createSlice({
@@ -35,7 +35,7 @@ const contatosSlice = createSlice({
   reducers: {
     excluir: (state, action: PayloadAction<number>) => {
       state.itens = [
-        ...state.itens.filter((contato) => contato.id !== action.payload),
+        ...state.itens.filter((contato) => contato.id !== action.payload)
       ]
     },
     editar: (state, action: PayloadAction<Contato>) => {
@@ -45,8 +45,8 @@ const contatosSlice = createSlice({
       if (indexDaTarefa >= 0) {
         state.itens[indexDaTarefa] = action.payload
       }
-    },
-  },
+    }
+  }
 })
 
 export const { excluir, editar } = contatosSlice.actions

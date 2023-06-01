@@ -43,7 +43,7 @@ const Contato = ({ nome, prioridade, info: infoOriginal, id }: Props) => {
                     id,
                     nome,
                     prioridade,
-                    info,
+                    info
                   })
                 )
                 setEstaEditando(false)

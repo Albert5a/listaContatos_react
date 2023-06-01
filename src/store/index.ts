@@ -6,8 +6,8 @@ import filtroReducer from './reducers/filtro'
 const store = configureStore({
   reducer: {
     contatos: contatosReducer,
-    filtro: filtroReducer,
-  },
+    filtro: filtroReducer
+  }
 })
 
 export type RootReducer = ReturnType<typeof store.getState>
