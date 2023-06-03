@@ -19,3 +19,5 @@ Até aqui na pasta src temos as pastas components (com as pastas Contato e Filtr
 Em seguida trabalhamos com o conceito de State para os botões Editar e Cancelar, e com as Props com um array de objetos para  colocar nome, prioridade e informações.
 
 Iniciamos a configuração do redux na pasta store com arquivo index.ts e pasta reducers com contatos.ts. Para evitar um array de objetos, criamos uma pasta models com o arquivo Contatos.ts para criarmos uma Classe que serão atribuidas aos demais objetos.
+
+Se tratando de REACT-ROUTER-DOM não podemos utilizar a tag a convencional com um href. Utilizamos um componente chamado link impotado do React-Router-DOM

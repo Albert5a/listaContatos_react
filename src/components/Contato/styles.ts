@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Botao } from '../../styles'
 import variaveis from '../../styles/variaveis'
 
 import * as enums from '../../utils/enums/Contato'
@@ -53,22 +54,6 @@ export const Info = styled.textarea`
 export const BarraAcoes = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 16px;
-`
-
-export const Botao = styled.button`
-  font-size: 12px;
-  font-weight: bold;
-  color: #fff;
-  padding: 8px 12px;
-  border: none;
-  cursor: pointer;
-  background-color: #2f3640;
-  border-radius: 8px;
-  margin-right: 8px;
-`
-
-export const BotaoSalvar = styled(Botao)`
-  background-color: ${variaveis.verde};
 `
 
 export const BotaoCancelarExcluir = styled(Botao)`
